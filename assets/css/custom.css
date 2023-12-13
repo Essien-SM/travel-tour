@@ -1,0 +1,64 @@
+/* Styles for mobile phones */
+@media (max-width: 767px) {
+  .table-container {
+    overflow-x: auto;
+  }
+
+  /* Hide the table head on mobile */
+  .table thead {
+    display: none;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  /* Convert rows to cards */
+  .table tbody tr {
+    display: block;
+    margin-bottom: 20px;
+    border: 3px solid #f35525;
+    color: gray;
+    font-size: 15px;
+    
+  }
+
+  .table tbody tr .htlfndr-scope-row{
+    background-color: #f35525;
+    color: #ffffff;
+  }
+
+  .table tbody td {
+    display: block;
+    text-align: left;
+    background-color: white;
+  }
+
+  .table tbody td::before {
+    content: attr(data-title);
+    display: inline-block;
+    text-align: left;
+    width: 150px; /* Set a width for the data title */
+  }
+  
+}
+
+/* Styles for tablets and larger screens */
+@media (min-width: 768px) {
+  /* Retain table format */
+  .table-container {
+    overflow-x: hidden;
+  }
+
+  .table tbody tr {
+    display: table-row;
+  }
+
+  .table tbody td {
+    display: table-cell;
+    text-align: left;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+}
